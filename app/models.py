@@ -17,7 +17,7 @@ class Blog(models.Model):
     author = models.ForeignKey(Author,on_delete=models.CASCADE,related_name="blog")
     
     def __str__(self):
-        return self.title + " by "+ self.author
+        return self.title + " by "+ str(self.author)
     
 class Comment(models.Model):
     comment = models.TextField(max_length=100)
